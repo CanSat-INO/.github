@@ -1,0 +1,62 @@
+name: Bug Report / 不具合報告
+description: 再現条件と期待する動作を記録します。
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: 公開してよい情報のみ記載してください。不明点は「未定」、未実施の試験は「未実施」と記載できます。実験結果は実施後に追記してください。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 対象分野
+      multiple: true
+      options:
+        - Software
+        - Electronics
+        - Mechanics
+        - Mission
+        - Ground Station
+        - Cross-cutting
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 希望する優先度
+      description: 担当者間で調整します。Project には自動転記されません。
+      options:
+        - 未定
+        - Critical
+        - High
+        - Medium
+        - Low
+  - type: textarea
+    id: actual
+    attributes:
+      label: 発生した問題
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境・機材・ソフトの版
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順・発生頻度
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する動作
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: ログ・画像・関連 Issue
+    validations:
+      required: false

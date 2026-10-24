@@ -1,0 +1,56 @@
+name: Feature Request / 提案
+description: 解決したい課題と提案を共有します。
+title: "[Feature] "
+body:
+  - type: markdown
+    attributes:
+      value: 公開してよい情報のみ記載してください。不明点は「未定」、未実施の試験は「未実施」と記載できます。実験結果は実施後に追記してください。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 対象分野
+      multiple: true
+      options:
+        - Software
+        - Electronics
+        - Mechanics
+        - Mission
+        - Ground Station
+        - Cross-cutting
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 希望する優先度
+      description: 担当者間で調整します。Project には自動転記されません。
+      options:
+        - 未定
+        - Critical
+        - High
+        - Medium
+        - Low
+  - type: textarea
+    id: problem
+    attributes:
+      label: 解決したい課題
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 代替案・影響範囲
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 採用判断・完了の基準
+    validations:
+      required: true

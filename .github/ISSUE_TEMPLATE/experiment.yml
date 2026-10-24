@@ -1,0 +1,68 @@
+name: Experiment / 実験・検証
+description: 条件・合格基準・結果・ログを記録します。
+title: "[Experiment] "
+body:
+  - type: markdown
+    attributes:
+      value: 公開してよい情報のみ記載してください。不明点は「未定」、未実施の試験は「未実施」と記載できます。実験結果は実施後に追記してください。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 対象分野
+      multiple: true
+      options:
+        - Software
+        - Electronics
+        - Mechanics
+        - Mission
+        - Ground Station
+        - Cross-cutting
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 希望する優先度
+      description: 担当者間で調整します。Project には自動転記されません。
+      options:
+        - 未定
+        - Critical
+        - High
+        - Medium
+        - Low
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的・検証したいこと
+    validations:
+      required: true
+  - type: textarea
+    id: conditions
+    attributes:
+      label: 試験条件・機材・ソフトの版
+    validations:
+      required: true
+  - type: textarea
+    id: procedure
+    attributes:
+      label: 手順
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: 測定項目・単位・合格基準
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: 結果・判定・残課題
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: ログ・データ保存先
+    validations:
+      required: false

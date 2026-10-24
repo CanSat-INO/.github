@@ -1,0 +1,56 @@
+name: Task / 開発タスク
+description: 開発作業の目的と完了条件を共有します。
+title: "[Task] "
+body:
+  - type: markdown
+    attributes:
+      value: 公開してよい情報のみ記載してください。不明点は「未定」、未実施の試験は「未実施」と記載できます。実験結果は実施後に追記してください。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 対象分野
+      multiple: true
+      options:
+        - Software
+        - Electronics
+        - Mechanics
+        - Mission
+        - Ground Station
+        - Cross-cutting
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 希望する優先度
+      description: 担当者間で調整します。Project には自動転記されません。
+      options:
+        - 未定
+        - Critical
+        - High
+        - Medium
+        - Low
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的・背景
+    validations:
+      required: true
+  - type: textarea
+    id: work
+    attributes:
+      label: 作業内容
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 完了条件
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 依存関係・関連 Issue
+    validations:
+      required: false
